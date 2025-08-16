@@ -353,6 +353,48 @@ const stakeholderData = [
         ]
     },
     {
+        id: "patrick-butlin",
+        name: "Patrick Butlin",
+        institution: "Eleos AI",
+        position: "Senior Research Lead",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["research_org", "digital_consciousness", "moral_status"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Principles for Responsible AI Consciousness Research (2024)",
+                url: "https://dl.acm.org/doi/pdf/10.1613/jair.1.17310"
+            },
+            {
+                title: "Taking AI Welfare Seriously (2024)",
+                url: "https://arxiv.org/pdf/2411.00986"
+            },
+            {
+                title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)",
+                url: "https://arxiv.org/pdf/2308.08708"
+            }
+        ]
+    },
+    {
+        id: "rosie-campbell",
+        name: "Rosie Campbell",
+        institution: "Eleos AI",
+        position: "Managing Director",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["research_org", "ai_safety_alignment", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Moral circle calibration: Why it's not always good to care more about an AI (2025)",
+                url: "https://experiencemachines.substack.com/cp/166205017"
+            }
+        ]
+    },
+    {
         id: "arvo-munoz-moran",
         name: "Arvo Muñoz Morán",
         institution: "Rethink Priorities",
