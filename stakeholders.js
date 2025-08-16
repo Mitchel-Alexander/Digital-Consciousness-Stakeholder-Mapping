@@ -157,13 +157,20 @@ const stakeholderData = [
     {
         id: "toni-sims",
         name: "Toni Sims",
-        institution: "New York University",
+        institution: "New York University (Center for Mind, Ethics, and Policy)",
+        position: "Researcher",
         webpage: "",
         contact: "",
-        notableResearch: "https://philpeople.org/profiles/toni-sims",
-        tags: ["academia", "philosophy_of_mind"],
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "moral_status"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Is there a tension between AI safety and AI welfare? (2025)",
+                url: "https://link.springer.com/article/10.1007/s11098-025-02302-2",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "mara-gaza",
@@ -551,14 +558,41 @@ const stakeholderData = [
     },
     {
         id: "jacy-anthis",
-        name: "Jacy Anthis",
-        institution: "Stanford University (HAI)",
+        name: "Jacy Reece Anthis",
+        institution: "Sentience Institute",
+        position: "Co-Founder",
         webpage: "https://jacyanthis.com/",
         contact: "",
-        notableResearch: "https://arxiv.org/abs/2407.08867",
-        tags: ["academia", "research_org", "moral_status"],
+        notableResearch: "",
+        tags: ["research_org", "digital_consciousness", "moral_status", "ai_safety_alignment"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Perceptions of Sentient AI and Other Digital Minds: Evidence from the AI, Morality, and Sentience (AIMS) Survey (2025)",
+                url: "https://dl.acm.org/doi/10.1145/3706598.3713329",
+                category: "Selected Research"
+            },
+            {
+                title: "Robots, Chatbots, Self-Driving Cars: Perceptions of Mind and Morality Across Artificial Intelligences (2025)",
+                url: "https://dl.acm.org/doi/10.1145/3706598.3713130",
+                category: "Selected Research"
+            },
+            {
+                title: "Which Artificial Intelligences do People Care Most About? A Conjoint Experiment on Moral Consideration (2024)",
+                url: "https://dl.acm.org/doi/10.1145/3613904.3642403",
+                category: "Selected Research"
+            },
+            {
+                title: "Predicting the Moral Consideration of Artificial Intelligences (2022)",
+                url: "https://www.sciencedirect.com/science/article/abs/pii/S0747563222001947?via%3Dihub",
+                category: "Selected Research"
+            },
+            {
+                title: "The Moral Inclusion of Artificial Entities: A Literature Review (2021)",
+                url: "https://link.springer.com/article/10.1007/s11948-021-00331-8",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "janet-pauketat",
@@ -586,12 +620,34 @@ const stakeholderData = [
         id: "ali-ladak",
         name: "Ali Ladak",
         institution: "Sentience Institute",
+        position: "Researcher",
         webpage: "https://www.sentienceinstitute.org/ali-ladak",
         contact: "",
-        notableResearch: "https://www.researchgate.net/publication/388547045_Digital_Sentience_Skepticism",
-        tags: ["research_org", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["research_org", "digital_consciousness", "moral_status"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Perceptions of Sentient AI and Other Digital Minds: Evidence from the AI, Morality, and Sentience (AIMS) Survey (2025)",
+                url: "https://dl.acm.org/doi/pdf/10.1145/3706598.3713329",
+                category: "Selected Research"
+            },
+            {
+                title: "Digital sentience skepticism (2025)",
+                url: "https://sciety.org/articles/activity/10.31234/osf.io/wvbya_v1",
+                category: "Selected Research"
+            },
+            {
+                title: "Robots, Chatbots, Self-Driving Cars: Perceptions of Mind and Morality Across Artificial Intelligences (2025)",
+                url: "https://dl.acm.org/doi/pdf/10.1145/3706598.3713130",
+                category: "Selected Research"
+            },
+            {
+                title: "What would qualify an artificial intelligence for moral standing? (2024)",
+                url: "https://link.springer.com/article/10.1007/s43681-023-00260-1",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "lucius-caviola",
