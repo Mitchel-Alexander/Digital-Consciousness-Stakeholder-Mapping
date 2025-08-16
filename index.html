@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISM Stakeholder Knowledge Graph</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <h1>PRISM</h1>
+                <h2>Stakeholder Mapping</h2>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search stakeholders...">
+            </div>
+            <div id="stakeholder-info" class="stakeholder-info">
+                <h3>Click a node to see details</h3>
+                <p class="instruction">The graph shows connections between stakeholders based on shared research interests and institutions.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <button id="toggle-sidebar">«</button>
+            <div class="graph-controls">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+                <button id="reset-zoom"><span>Reset</span></button>
+                <button id="dark-mode-toggle">Dark Mode</button>
+            </div>
+            <div id="graph-container"></div>
+        </div>
+    </div>
+    <script src="stakeholders.js"></script>
+    <script src="graph.js"></script>
+</body>
+</html>

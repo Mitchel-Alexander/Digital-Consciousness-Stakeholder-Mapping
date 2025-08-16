@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --sidebar-bg: #fff;
+    --border-color: #e0e0e0;
+    --header-color: #2c3e50;
+    --subheader-color: #7f8c8d;
+    --graph-bg: #f9f9f9;
+    --button-bg: white;
+    --button-hover-bg: #f0f0f0;
+}
+
+body.dark-mode {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --sidebar-bg: #34495e;
+    --border-color: #4a6278;
+    --header-color: #ecf0f1;
+    --subheader-color: #bdc3c7;
+    --graph-bg: #2c3e50;
+    --button-bg: #34495e;
+    --button-hover-bg: #4a6278;
+}
+
+body.dark-mode, .dark-mode .sidebar, .dark-mode .stakeholder-info p, .dark-mode .filter-options label, .dark-mode .publications li, .dark-mode .connections li {
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: width 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    position: relative;
+    transition: border-color 0.3s;
+}
+
+#toggle-sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    transition: left 0.3s, background-color 0.3s, border-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#toggle-sidebar:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+}
+
+.sidebar.collapsed + .main-content #toggle-sidebar {
+    left: 20px;
+}
+
+.header h1 {
+    color: var(--header-color);
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.header h2 {
+    color: var(--subheader-color);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--sidebar-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    transition: color 0.3s;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.stakeholder-info {
+    flex-grow: 1;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    transition: border-color 0.3s;
+}
+
+.stakeholder-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--header-color);
+    transition: color 0.3s;
+}
+
+.stakeholder-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.stakeholder-info .instruction {
+    color: var(--subheader-color);
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.stakeholder-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.stakeholder-info a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#graph-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--graph-bg);
+    transition: background-color 0.3s;
+}
+
+.graph-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.graph-controls button {
+    height: 40px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    padding: 0 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#zoom-in, #zoom-out {
+    width: 40px;
+    padding: 0;
+}
+
+#reset-zoom span {
+    padding: 0;
+}
+
+.graph-controls button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+}
+
+/* Node styling */
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+body.dark-mode .node circle {
+    stroke: #2c3e50;
+}
+
+.node text {
+    font-size: 12px;
+    fill: #333;
+}
+
+body.dark-mode .node text {
+    fill: var(--text-color);
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+body.dark-mode .link {
+    stroke: #ecf0f1;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+    color: #555;
+}
+
+.tag.consciousness { background-color: #FADBD8; color: #943126; }
+.tag.digital_minds { background-color: #FAE5D3; color: #9A7D0A; }
+.tag.moral_status { background-color: #D4EFDF; color: #1E8449; }
+.tag.ethics { background-color: #D1F2EB; color: #117A65; }
+.tag.philosophy_of_mind { background-color: #D6EAF8; color: #2471A3; }
+.tag.academia { background-color: #EAF2F8; color: #2E86C1; }
+.tag.industry { background-color: #EBF5FB; color: #2874A6; }
+.tag.research_org { background-color: #F4ECF7; color: #7D3C98; }
+
+.metadata {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--subheader-color);
+    transition: color 0.3s;
+}
+
+.publications {
+    margin-top: 15px;
+}
+
+.publications h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--header-color);
+    transition: color 0.3s;
+}
+
+.publications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.publications li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.connections {
+    margin-top: 15px;
+}
+
+.connections h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--header-color);
+    transition: color 0.3s;
+}
+
+.connections ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.connections li {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    z-index: 100;
+    max-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .tooltip {
+    background-color: rgba(44, 62, 80, 0.9);
+    border-color: #4a6278;
+    color: #ecf0f1;
+}

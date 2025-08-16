@@ -1,0 +1,21 @@
+{
+  "name": "prism-stakeholder-mapping",
+  "version": "1.0.0",
+  "description": "Interactive knowledge graph of AI consciousness and digital minds research stakeholders",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "knowledge-graph",
+    "ai-consciousness",
+    "stakeholder-mapping",
+    "research-visualization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
