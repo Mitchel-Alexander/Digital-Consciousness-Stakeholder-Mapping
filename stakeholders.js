@@ -738,6 +738,121 @@ const stakeholderData = [
         relevantResearch: []
     },
     {
+        id: "anil-seth",
+        name: "Anil Seth",
+        institution: "University of Sussex",
+        position: "Professor of Cognitive and Computational Neuroscience",
+        webpage: "https://www.anilseth.com/",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "cognitive_science", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Conscious artificial intelligence and biological naturalism (Forthcoming)",
+                url: "https://osf.io/preprints/psyarxiv/tz6an_v2",
+                category: "Selected Research"
+            },
+            {
+                title: "Tests for consciousness in humans and beyond (2024)",
+                url: "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(24)00010-X",
+                category: "Selected Research"
+            },
+            {
+                title: "Consciousness beyond the human case (2023)",
+                url: "#",
+                category: "Selected Research"
+            },
+            {
+                title: "The perception of time in humans, brains, and machines (2023)",
+                url: "https://osf.io/preprints/psyarxiv/c7vzx_v1",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "daria-zakharova",
+        name: "Daria Zakharova",
+        institution: "London School of Economics",
+        position: "Doctoral Researcher",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Can LLMs make trade-offs involving stipulated pain and pleasure states? (2024)",
+                url: "https://arxiv.org/abs/2411.02432",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "hakwan-lau",
+        name: "Hakwan Lau",
+        institution: "UCLA (Brain Research Institute)",
+        position: "Professor",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "cognitive_science"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Engineering Sentience (2025)",
+                url: "https://arxiv.org/pdf/2506.20504",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "megan-peters",
+        name: "Megan Peters",
+        institution: "University of California Irvine",
+        position: "Associate Professor",
+        webpage: "https://www.meganakpeters.org/",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "cognitive_science", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Tests for consciousness in humans and beyond (2024)",
+                url: "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(24)00010-X",
+                category: "Selected Research"
+            },
+            {
+                title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)",
+                url: "https://arxiv.org/pdf/2308.08708",
+                category: "Selected Research"
+            },
+            {
+                title: "Consciousness beyond the human case (2023)",
+                url: "https://www.cell.com/current-biology/pdf/S0960-9822(23)00852-7.pdf",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "tim-bayne",
+        name: "Tim Bayne",
+        institution: "Monash University",
+        position: "Professor",
+        webpage: "https://research.monash.edu/en/persons/timothy-bayne",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "philosophy_of_mind"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Tests for consciousness in humans and beyond (2024)",
+                url: "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(24)00010-X",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
         id: "ted-lappas",
         name: "Ted Lappas",
         institution: "",
