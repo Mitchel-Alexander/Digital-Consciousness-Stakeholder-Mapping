@@ -353,6 +353,34 @@ const stakeholderData = [
         ]
     },
     {
+        id: "kyle-fish",
+        name: "Kyle Fish",
+        institution: "Anthropic",
+        position: "Researcher Alignment Science",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["industry", "moral_status", "ai_safety_alignment", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Could AI models be conscious? (2025)",
+                url: "https://www.youtube.com/watch?v=pyXouxa0WnY",
+                category: "Public Engagement"
+            },
+            {
+                title: "Taking AI Welfare Seriously (2024)",
+                url: "https://arxiv.org/abs/2411.00986",
+                category: "Selected Research"
+            },
+            {
+                title: "Why I’m Working on AI Welfare (2024)",
+                url: "https://forum.effectivealtruism.org/posts/bvcbdnsJ9rEvmcZXn/why-i-m-working-on-ai-welfare",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
         id: "patrick-butlin",
         name: "Patrick Butlin",
         institution: "Eleos AI",

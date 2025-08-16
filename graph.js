@@ -316,11 +316,22 @@ function showStakeholderInfo(stakeholder, links) {
             content += '</div>';
         }
         if (stakeholder.relevantResearch && stakeholder.relevantResearch.length > 0) {
-            content += '<h4>Selected Research</h4><ul>';
-            stakeholder.relevantResearch.forEach(item => {
-                content += `<li><a href="${item.url}" target="_blank">${item.title}</a></li>`;
-            });
-            content += '</ul>';
+            const researchByCat = stakeholder.relevantResearch.reduce((acc, res) => {
+                const cat = res.category || 'Selected Research';
+                if (!acc[cat]) {
+                    acc[cat] = [];
+                }
+                acc[cat].push(res);
+                return acc;
+            }, {});
+
+            for (const category in researchByCat) {
+                content += `<h4>${category}</h4><ul>`;
+                researchByCat[category].forEach(item => {
+                    content += `<li><a href="${item.url}" target="_blank">${item.title}</a></li>`;
+                });
+                content += '</ul>';
+            }
         }
     } else {
         content += `<p><strong>Type:</strong> ${stakeholder.type.replace(/_/g, ' ')}</p>`;
