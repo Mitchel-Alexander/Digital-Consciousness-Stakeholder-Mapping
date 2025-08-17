@@ -112,41 +112,54 @@ const stakeholderData = [
     },
     {
         id: "clara-columbatto",
-        name: "Clara Columbatto",
-        institution: "University of Waterloo",
-        webpage: "https://claracolombatto.com/",
+        name: "Clara Colombatto",
+        institution: "University of Waterloo (Department of Psychology)",
+        position: "Assistant Professor",
+        webpage: "https://claracolombatto.com/index.html",
         contact: "",
-        notableResearch: "Folk psychological attributions of consciousness to large language models (2024)",
-        tags: ["academia", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["academia", "cognitive_science"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "The influence of mental state attributions on trust in large language models (2025)",
+                url: "https://www.nature.com/articles/s44271-025-00262-1",
+                category: "Selected Research"
+            },
+            {
+                title: "Folk psychological attributions of consciousness to large language models (2024)",
+                url: "https://academic.oup.com/nc/article/2024/1/niae013/7644104",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "jaan-aru",
         name: "Jaan Aru",
         institution: "University of Tartu",
+        position: "Associate Professor",
         webpage: "https://sites.google.com/view/jaanaru",
         contact: "",
-        notableResearch: "The feasibility of artificial consciousness through the lens of neuroscience (2023)",
-        tags: ["academia", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "cognitive_science"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Does neural computation feel like something? (2025)",
+                url: "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2025.1511972/full",
+                category: "Selected Research"
+            },
+            {
+                title: "The feasibility of artificial consciousness through the lens of neuroscience (2023)",
+                url: "https://www.sciencedirect.com/science/article/abs/pii/S0166223623002278",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "philip-ball",
         name: "Philip Ball",
         institution: "",
-        webpage: "",
-        contact: "",
-        notableResearch: "",
-        tags: ["academia", "digital_consciousness"],
-        type: "stakeholder",
-        relevantResearch: []
-    },
-    {
-        id: "michael-levin",
-        name: "Michael Levin",
-        institution: "Harvard University",
         webpage: "",
         contact: "",
         notableResearch: "",
@@ -285,13 +298,20 @@ const stakeholderData = [
     {
         id: "ljubisa-bojic",
         name: "Ljubiša Bojić",
-        institution: "",
+        institution: "Institute for Artificial Intelligence Research and Development of Serbia",
+        position: "Senior Research Fellow",
         webpage: "https://ljubisabojic.com/",
         contact: "",
-        notableResearch: "https://www.nature.com/articles/s41599-024-04154-3",
-        tags: ["academia", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["research_org", "ai_safety_alignment"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Signs of consciousness in AI: Can GPT-3 tell how smart it really is? (2024)",
+                url: "https://www.nature.com/articles/s41599-024-04154-3",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "leonore-blum",
@@ -727,15 +747,33 @@ const stakeholderData = [
         relevantResearch: []
     },
     {
-        id: "amanda-askell",
-        name: "Amanda Askell",
-        institution: "Anthropic",
+        id: "ted-lappas",
+        name: "Ted Lappas",
+        institution: "",
         webpage: "",
         contact: "",
         notableResearch: "",
-        tags: ["industry", "ethics"],
+        tags: [],
         type: "stakeholder",
         relevantResearch: []
+    },
+    {
+        id: "daria-zakharova",
+        name: "Daria Zakharova",
+        institution: "London School of Economics",
+        position: "Doctoral Researcher",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Can LLMs make trade-offs involving stipulated pain and pleasure states? (2024)",
+                url: "https://arxiv.org/abs/2411.02432",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "anil-seth",
@@ -760,76 +798,12 @@ const stakeholderData = [
             },
             {
                 title: "Consciousness beyond the human case (2023)",
-                url: "#",
+                url: "https://www.cell.com/current-biology/pdf/S0960-9822(23)00852-7.pdf",
                 category: "Selected Research"
             },
             {
                 title: "The perception of time in humans, brains, and machines (2023)",
                 url: "https://osf.io/preprints/psyarxiv/c7vzx_v1",
-                category: "Selected Research"
-            }
-        ]
-    },
-    {
-        id: "daria-zakharova",
-        name: "Daria Zakharova",
-        institution: "London School of Economics",
-        position: "Doctoral Researcher",
-        webpage: "",
-        contact: "",
-        notableResearch: "",
-        tags: ["academia", "digital_consciousness"],
-        type: "stakeholder",
-        relevantResearch: [
-            {
-                title: "Can LLMs make trade-offs involving stipulated pain and pleasure states? (2024)",
-                url: "https://arxiv.org/abs/2411.02432",
-                category: "Selected Research"
-            }
-        ]
-    },
-    {
-        id: "hakwan-lau",
-        name: "Hakwan Lau",
-        institution: "UCLA (Brain Research Institute)",
-        position: "Professor",
-        webpage: "",
-        contact: "",
-        notableResearch: "",
-        tags: ["academia", "cognitive_science"],
-        type: "stakeholder",
-        relevantResearch: [
-            {
-                title: "Engineering Sentience (2025)",
-                url: "https://arxiv.org/pdf/2506.20504",
-                category: "Selected Research"
-            }
-        ]
-    },
-    {
-        id: "megan-peters",
-        name: "Megan Peters",
-        institution: "University of California Irvine",
-        position: "Associate Professor",
-        webpage: "https://www.meganakpeters.org/",
-        contact: "",
-        notableResearch: "",
-        tags: ["academia", "cognitive_science", "digital_consciousness"],
-        type: "stakeholder",
-        relevantResearch: [
-            {
-                title: "Tests for consciousness in humans and beyond (2024)",
-                url: "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(24)00010-X",
-                category: "Selected Research"
-            },
-            {
-                title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)",
-                url: "https://arxiv.org/pdf/2308.08708",
-                category: "Selected Research"
-            },
-            {
-                title: "Consciousness beyond the human case (2023)",
-                url: "https://www.cell.com/current-biology/pdf/S0960-9822(23)00852-7.pdf",
                 category: "Selected Research"
             }
         ]
@@ -853,15 +827,84 @@ const stakeholderData = [
         ]
     },
     {
-        id: "ted-lappas",
-        name: "Ted Lappas",
-        institution: "",
+        id: "steve-fleming",
+        name: "Steve Fleming",
+        institution: "University College London",
+        position: "Professor of Cognitive Neuroscience",
+        department: "Experimental Psychology and Institute of Cognitive Neuroscience",
+        webpage: "https://profiles.ucl.ac.uk/28069-steve-fleming/about",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "cognitive_science"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "The influence of mental state attributions on trust in large language models (2025)",
+                url: "https://pubmed.ncbi.nlm.nih.gov/40415069/",
+                category: "Selected Research"
+            },
+            {
+                title: "Tests for consciousness in humans and beyond (2024)",
+                url: "https://pubmed.ncbi.nlm.nih.gov/38485576/",
+                category: "Selected Research"
+            },
+            {
+                title: "Folk psychological attributions of consciousness to large language models (2024)",
+                url: "https://academic.oup.com/nc/article/2024/1/niae013/7644104",
+                category: "Selected Research"
+            },
+            {
+                title: "Metacognitive Psychophysics in Humans, Animals, and AI (2023)",
+                url: "https://static1.squarespace.com/static/5616b377e4b0670f148ff742/t/6582969775277e4dc16f9765/1703057048454/s8.pdf",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "adria-moret",
+        name: "Adrià Moret",
+        institution: "University of Barcelona, Board Member UPF (Center for Animal Ethics)",
+        position: "Researcher",
+        webpage: "https://sites.google.com/view/adriamoret",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "moral_status"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "AI Welfare Risks (2025)",
+                url: "https://link.springer.com/article/10.1007/s11098-025-02343-7",
+                category: "Selected Research"
+            },
+            {
+                title: "Taking into Account Sentient Non-Humans in AI Ambitious Value Learning: Sentientist Coherent Extrapolated Volition (2023)",
+                url: "https://www.worldscientific.com/doi/abs/1142/S2705078523500042?srsltid=AfmBOooQ4IAyGnel03KquZbRpGONUmZA15lx1PC8CjHw222_g3jx6jgI",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
+        id: "blaise-aguera-y-arcas",
+        name: "Blaise Aguera y Arcas",
+        institution: "Google Research",
+        position: "CTO of Technology & Society",
         webpage: "",
         contact: "",
         notableResearch: "",
-        tags: [],
+        tags: ["industry", "digital_consciousness", "ai_safety_alignment"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "What Is Intelligence (2025)",
+                url: "https://whatisintelligence.antikythera.org/chapter-05/",
+                category: "Selected Research"
+            },
+            {
+                title: "Can LLMs make trade-offs involving stipulated pain and pleasure states? (2024)",
+                url: "https://arxiv.org/pdf/2411.02432",
+                category: "Selected Research"
+            }
+        ]
     },
     // Research areas as nodes
     {
@@ -960,5 +1003,24 @@ const stakeholderData = [
         name: "Imperial College London",
         type: "institution",
         description: "A public research university in London, specializing in science, engineering, medicine, and business."
+    },
+    {
+        id: "google-research",
+        name: "Google Research",
+        type: "institution",
+        description: "Google's division for conducting research in a variety of computer science fields, including machine intelligence."
+    },
+    {
+        id: "university-college-london",
+        name: "University College London",
+        type: "institution",
+        description: "A public research university in London, a member institution of the federal University of London, and the second-largest university in the United Kingdom by total enrolment."
+    },
+    {
+        id: "monash-university",
+        name: "Monash University",
+        type: "institution",
+        description: "A public research university based in Melbourne, Victoria, Australia."
     }
 ];
+

@@ -302,6 +302,9 @@ function showStakeholderInfo(stakeholder, links) {
         if (stakeholder.position) {
             content += `<p><strong>Position:</strong> ${stakeholder.position}</p>`;
         }
+        if (stakeholder.department) {
+            content += `<p><strong>Department:</strong> ${stakeholder.department}</p>`;
+        }
         if (stakeholder.institution) {
             content += `<p><strong>Institution:</strong> ${stakeholder.institution}</p>`;
         }
