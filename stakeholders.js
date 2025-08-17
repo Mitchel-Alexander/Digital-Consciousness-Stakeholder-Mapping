@@ -257,12 +257,34 @@ const stakeholderData = [
         id: "leonard-dung",
         name: "Leonard Dung",
         institution: "Ruhr-University Bochum",
+        position: "Postdoctoral Researcher",
         webpage: "https://sites.google.com/view/leonard-dung/home",
         contact: "",
         notableResearch: "",
-        tags: ["academia", "digital_consciousness"],
+        tags: ["academia", "digital_consciousness", "moral_status", "ai_safety_alignment"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Saving Artificial Minds: Understanding and Preventing AI Suffering (2026)",
+                url: "https://www.routledge.com/Saving-Artificial-Minds-Understanding-and-Preventing-AI-Suffering/Dung/p/book/9781041144663?srsltid=AfmBOoqqmngMvn8ucEqmEFsoK-2eOJ_WMB3CDPy7qQQMyBrU5iOAl6Tm",
+                category: "Selected Research"
+            },
+            {
+                title: "Implementing Artificial Consciousness (2024)",
+                url: "https://onlinelibrary.wiley.com/doi/10.1111/mila.12532",
+                category: "Selected Research"
+            },
+            {
+                title: "Tests of animal consciousness are tests of machine consciousness (2023)",
+                url: "https://link.springer.com/article/10.1007/s10670-023-00753-9",
+                category: "Selected Research"
+            },
+            {
+                title: "How to deal with risks of AI suffering (2023)",
+                url: "https://www.tandfonline.com/doi/full/10.1080/0020174X.2023.2238287",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "aida-elamrani",
@@ -559,13 +581,26 @@ const stakeholderData = [
     {
         id: "george-deane",
         name: "George Deane",
-        institution: "University of Edinburgh",
+        institution: "University of Montreal",
+        department: "Department of Philosophy",
+        position: "Assistant Professor",
         webpage: "",
         contact: "",
-        notableResearch: "https://scholar.google.com/citations?user=L6V9oycAAAAJ&hl=en",
-        tags: ["academia", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "philosophy_of_mind", "cognitive_science"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)",
+                url: "https://arxiv.org/abs/2308.08708",
+                category: "Selected Research"
+            },
+            {
+                title: "Machines That Feel and Think: The Role of Affective Feelings and Mental Action in (Artificial) General Intelligence (2022)",
+                url: "https://ieeexplore.ieee.org/abstract/document/10301935",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "joe-carlsmith",
@@ -703,6 +738,25 @@ const stakeholderData = [
         tags: ["research_org", "moral_status", "digital_consciousness"],
         type: "stakeholder",
         relevantResearch: []
+    },
+    {
+        id: "luke-kersten",
+        name: "Luke Kersten",
+        institution: "University of Alberta",
+        department: "Department of Philosophy",
+        position: "Assistant Professor",
+        webpage: "https://lukekersten.weebly.com/",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "cognitive_science"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Implementing artificial consciousness (2025)",
+                url: "https://philpapers.org/archive/DUNIAC-3.pdf",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "marc-anderson",
@@ -1023,6 +1077,18 @@ const stakeholderData = [
         name: "Monash University",
         type: "institution",
         description: "A public research university based in Melbourne, Victoria, Australia."
+    },
+    {
+        id: "university-of-alberta",
+        name: "University of Alberta",
+        type: "institution",
+        description: "A public research university located in Edmonton, Alberta, Canada."
+    },
+    {
+        id: "university-of-montreal",
+        name: "University of Montreal",
+        type: "institution",
+        description: "A French-language public research university in Montreal, Quebec, Canada."
     }
 ];
 
