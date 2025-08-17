@@ -672,7 +672,7 @@ const stakeholderData = [
     {
         id: "lucius-caviola",
         name: "Lucius Caviola",
-        institution: "University of Oxford (Global Priorities Institute)",
+        institution: "University of Oxford",
         webpage: "https://luciuscaviola.com/",
         contact: "",
         notableResearch: "The Societal Response to Potentially Sentient AI (2025)",
@@ -683,7 +683,7 @@ const stakeholderData = [
     {
         id: "bradford-saad",
         name: "Bradford Saad",
-        institution: "University of Oxford (Global Priorities Institute)",
+        institution: "University of Oxford",
         webpage: "https://www.philosophy.ox.ac.uk/people/brad-saad#tab-4482496",
         contact: "",
         notableResearch: "Forecasting Digital Minds Takeoff Scenarios: Expert Survey (2025)",
@@ -727,7 +727,7 @@ const stakeholderData = [
     {
         id: "andreas-morgensen",
         name: "Andreas Morgensen",
-        institution: "University of Oxford (Global Priorities Institute)",
+        institution: "University of Oxford",
         webpage: "",
         contact: "",
         notableResearch: "Digital Minds: Importance and Key Research Questions (2024)",

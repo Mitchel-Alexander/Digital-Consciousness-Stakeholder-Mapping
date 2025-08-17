@@ -27,15 +27,15 @@ function getConnectionCount(nodeId, links) {
 }
 
 // Generate links between nodes based on tags and institutions
-function generateLinks() {
+function generateLinks(nodes) { // <-- Accept nodes as an argument
     const links = [];
-    const stakeholders = stakeholderData.filter(s => s.type === "stakeholder");
+    const stakeholders = nodes.filter(s => s.type === "stakeholder");
 
     // Connect stakeholders to research areas
     stakeholders.forEach(stakeholder => {
         if (stakeholder.tags && stakeholder.tags.length > 0) {
             stakeholder.tags.forEach(tag => {
-                if (stakeholderData.some(n => n.id === tag.replace(/_/g, '-') && n.type === 'research_area')) {
+                if (nodes.some(n => n.id === tag.replace(/_/g, '-') && n.type === 'research_area')) {
                     links.push({ source: stakeholder.id, target: tag.replace(/_/g, '-'), value: 1 });
                 }
             });
@@ -45,7 +45,7 @@ function generateLinks() {
         if (stakeholder.institution) {
             const institutions = stakeholder.institution.split(' / ');
             institutions.forEach(instName => {
-                const institutionNode = stakeholderData.find(d => d.type === 'institution' && instName.trim().includes(d.name));
+                const institutionNode = nodes.find(d => d.type === 'institution' && instName.trim().includes(d.name));
                 if (institutionNode) {
                     links.push({ source: stakeholder.id, target: institutionNode.id, value: 1 });
                 }
@@ -103,6 +103,25 @@ function initializeGraph() {
     const width = container.clientWidth;
     const height = container.clientHeight;
     
+    // Count stakeholders per institution
+    const institutionCounts = {};
+    stakeholderData.forEach(node => {
+        if (node.type === 'stakeholder' && node.institution) {
+            const institutions = node.institution.split(' / ').map(i => i.trim());
+            institutions.forEach(inst => {
+                institutionCounts[inst] = (institutionCounts[inst] || 0) + 1;
+            });
+        }
+    });
+
+    // Filter out institutions with fewer than 2 stakeholders
+    const activeNodes = stakeholderData.filter(node => {
+        if (node.type === 'institution') {
+            return institutionCounts[node.name] >= 2;
+        }
+        return true;
+    });
+
     d3.select("#graph-container svg").remove();
     
     const svg = d3.select("#graph-container")
@@ -117,8 +136,8 @@ function initializeGraph() {
 
     const g = svg.append("g");
     
-    const links = generateLinks();
-    const nodes = stakeholderData;
+    const links = generateLinks(activeNodes); // <-- Pass activeNodes here
+    const nodes = activeNodes; // Use the filtered nodes
     
     const centerX = width / 2;
     const centerY = height / 2;
@@ -381,7 +400,7 @@ function initializeSearch() {
         }
         
         const matchedNodeIds = new Set();
-        stakeholderData.forEach(node => {
+        graph.nodes.forEach(node => { // Changed from stakeholderData
             let isMatch = false;
             if (node.name.toLowerCase().includes(searchTerm)) isMatch = true;
             if (node.institution && node.institution.toLowerCase().includes(searchTerm)) isMatch = true;
