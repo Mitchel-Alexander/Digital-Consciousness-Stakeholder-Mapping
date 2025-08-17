@@ -92,12 +92,25 @@ const stakeholderData = [
         id: "rose-guingrich",
         name: "Rose Guingrich",
         institution: "Princeton University",
+        department: "Psychology & Social Policy",
+        position: "Doctoral Researcher",
         webpage: "https://roseguingrich.com/",
         contact: "",
-        notableResearch: "Ascribing consciousness to artificial intelligence: human-AI interaction and its carry-over effects on human-human interaction",
-        tags: ["academia", "digital_consciousness"],
+        notableResearch: "",
+        tags: ["academia", "digital_consciousness", "moral_status"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "Chatbots as Social Companions: How People Perceive Consciousness, Human Likeness, and Social Health Benefits in Machines (2025)",
+                url: "https://roseguingrich.com/wp-content/uploads/2025/03/guingrich-graziano-chatbots-as-social-companions.pdf",
+                category: "Selected Research"
+            },
+            {
+                title: "Ascribing Consciousness to Artificial Intelligence: Human-AI Interaction and its Carry-Over Effects on Human-Human Interaction (2024)",
+                url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1322781/full",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "peter-godfrey-smith",
@@ -332,17 +345,6 @@ const stakeholderData = [
         contact: "",
         notableResearch: "",
         tags: ["academia", "research_org"],
-        type: "stakeholder",
-        relevantResearch: []
-    },
-    {
-        id: "steven-byrnes",
-        name: "Steven Byrnes",
-        institution: "",
-        webpage: "https://sjbyrnes.com/agi.html",
-        contact: "",
-        notableResearch: "https://www.lesswrong.com/posts/32ca3B7rJ93xo9tvb/thoughts-on-agi-consciousness-sentience",
-        tags: ["digital_consciousness"],
         type: "stakeholder",
         relevantResearch: []
     },
