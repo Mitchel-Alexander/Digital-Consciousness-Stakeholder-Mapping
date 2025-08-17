@@ -212,13 +212,26 @@ const stakeholderData = [
     {
         id: "peter-salib",
         name: "Peter Salib",
-        institution: "University of Houston Law Centre",
+        institution: "University of Houston",
+        department: "University of Houston Law Center",
+        position: "Assistant Professor of Law",
         webpage: "https://www.peternsalib.com/",
         contact: "",
         notableResearch: "",
-        tags: ["academia", "ethics"],
+        tags: ["academia", "moral_status"],
         type: "stakeholder",
-        relevantResearch: []
+        relevantResearch: [
+            {
+                title: "AI Rights for Human Flourishing (Forthcoming)",
+                url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5353214",
+                category: "Selected Research"
+            },
+            {
+                title: "AI Rights for Human Safety (2025)",
+                url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913167",
+                category: "Selected Research"
+            }
+        ]
     },
     {
         id: "kristin-andrews",
@@ -759,6 +772,30 @@ const stakeholderData = [
         ]
     },
     {
+        id: "jonathan-simon",
+        name: "Jonathan Simon",
+        institution: "University of Montreal",
+        department: "Department of Philosophy",
+        position: "Associate Professor",
+        webpage: "https://jonsimon.net/",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "philosophy_of_mind", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (2023)",
+                url: "https://arxiv.org/pdf/2308.08708",
+                category: "Selected Research"
+            },
+            {
+                title: "What is it like to be AlphaGo? (2021)",
+                url: "https://jonsimon.net/papers/AlphaGo.pdf",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
         id: "marc-anderson",
         name: "Marc Anderson",
         institution: "",
@@ -1089,6 +1126,12 @@ const stakeholderData = [
         name: "University of Montreal",
         type: "institution",
         description: "A French-language public research university in Montreal, Quebec, Canada."
+    },
+    {
+        id: "university-of-houston",
+        name: "University of Houston",
+        type: "institution",
+        description: "A public research university in Houston, Texas."
     }
 ];
 
