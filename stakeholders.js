@@ -68,6 +68,18 @@ const stakeholderData = [
         relevantResearch: []
     },
     {
+        id: "franz-hildebrandt-harangozo",
+        name: "Franz Hildebrandt-Harangozó",
+        institution: "California Institute for Machine Consciousness (CIMC)",
+        position: "Philosopher",
+        webpage: "",
+        contact: "",
+        notableResearch: "",
+        tags: [],
+        type: "stakeholder",
+        relevantResearch: []
+    },
+    {
         id: "eric-schwitzgebel",
         name: "Eric Schwitzgebel",
         institution: "",
