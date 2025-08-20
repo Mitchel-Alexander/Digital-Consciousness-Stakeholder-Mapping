@@ -56,9 +56,10 @@ const stakeholderData = [
         relevantResearch: []
     },
     {
-        id: "josha-bach",
-        name: "Josha Bach",
-        institution: "",
+        id: "joscha-bach",
+        name: "Joscha Bach",
+        institution: "California Institute for Machine Consciousness (CIMC)",
+        position: "Executive Director",
         webpage: "",
         contact: "",
         notableResearch: "",
@@ -796,6 +797,45 @@ const stakeholderData = [
         ]
     },
     {
+        id: "simon-goldstein",
+        name: "Simon Goldstein",
+        institution: "University of Hong Kong",
+        department: "Department of Philosophy",
+        position: "Associate Professor",
+        webpage: "https://www.simondgoldstein.com/",
+        contact: "",
+        notableResearch: "",
+        tags: ["academia", "moral_status", "ai_safety_alignment", "digital_consciousness"],
+        type: "stakeholder",
+        relevantResearch: [
+            {
+                title: "AI Rights for Human Flourishing (2025)",
+                url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5353214",
+                category: "Selected Research"
+            },
+            {
+                title: "AI Rights for Human Safety (2025)",
+                url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913167",
+                category: "Selected Research"
+            },
+            {
+                title: "A Case for AI Consciousness: Language Agents and Global Workspace Theory (Forthcoming)",
+                url: "https://philpapers.org/archive/GOLACF-2.pdf",
+                category: "Selected Research"
+            },
+            {
+                title: "DOES CHATGPT HAVE A MIND? (Forthcoming)",
+                url: "https://philpapers.org/archive/GOLDCH.pdf",
+                category: "Selected Research"
+            },
+            {
+                title: "AI Wellbeing (Forthcoming)",
+                url: "https://philpapers.org/archive/GOLAWE-4.pdf",
+                category: "Selected Research"
+            }
+        ]
+    },
+    {
         id: "marc-anderson",
         name: "Marc Anderson",
         institution: "",
@@ -1132,6 +1172,18 @@ const stakeholderData = [
         name: "University of Houston",
         type: "institution",
         description: "A public research university in Houston, Texas."
+    },
+    {
+        id: "university-of-hong-kong",
+        name: "University of Hong Kong",
+        type: "institution",
+        description: "A public research university in Hong Kong."
+    },
+    {
+        id: "cimc",
+        name: "California Institute for Machine Consciousness (CIMC)",
+        type: "institution",
+        description: "A research institute dedicated to the study of machine consciousness."
     }
 ];
 
