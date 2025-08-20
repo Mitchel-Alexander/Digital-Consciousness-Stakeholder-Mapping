@@ -3,7 +3,7 @@ let graph = {};
 
 // Node color mapping
 function getNodeColor(d) {
-    if (d.type === 'research_area') return '#88bab5';
+    if (d.type === 'research_area') return '#ff4000';
     if (d.type === 'institution') return '#159ed4';
     if (d.type === 'stakeholder') return '#97b0ba';
     return '#ccc';
