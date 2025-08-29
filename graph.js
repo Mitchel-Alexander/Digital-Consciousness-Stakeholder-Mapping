@@ -272,6 +272,34 @@ function initializeGraph() {
         });
     
     svg.call(zoom);
+
+    let initialTransform = d3.zoomIdentity;
+
+    // Wait for the simulation to settle, then fit the graph to the view
+    simulation.on('end', () => {
+        if (nodes.length === 0) return;
+
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        node.each(d => {
+            minX = Math.min(minX, d.x);
+            maxX = Math.max(maxX, d.x);
+            minY = Math.min(minY, d.y);
+            maxY = Math.max(maxY, d.y);
+        });
+
+        const graphWidth = maxX - minX;
+        const graphHeight = maxY - minY;
+
+        if (graphWidth === 0 || graphHeight === 0) return;
+
+        const scale = Math.min(width / graphWidth, height / graphHeight) * 0.9;
+        const translateX = (width - graphWidth * scale) / 2 - minX * scale;
+        const translateY = (height - graphHeight * scale) / 2 - minY * scale;
+
+        initialTransform = d3.zoomIdentity.translate(translateX, translateY).scale(scale);
+        
+        svg.transition().duration(750).call(zoom.transform, initialTransform);
+    });
     
     document.getElementById("zoom-in").addEventListener("click", () => {
         zoom.scaleBy(svg.transition().duration(750), 1.2);
@@ -282,7 +310,7 @@ function initializeGraph() {
     });
     
     document.getElementById("reset-zoom").addEventListener("click", () => {
-        svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
+        svg.transition().duration(750).call(zoom.transform, initialTransform);
     });
 
     const sidebar = document.querySelector(".sidebar");
@@ -290,27 +318,48 @@ function initializeGraph() {
     toggleSidebar.addEventListener("click", () => {
         sidebar.classList.toggle("collapsed");
         toggleSidebar.innerHTML = sidebar.classList.contains("collapsed") ? "»" : "«";
-    });
 
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        updateNodeTextColors();
-        localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        // Redraw graph after sidebar animation
+        setTimeout(() => {
+            resizeGraph();
+        }, 300);
     });
-
-    if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-    }
-    
-    updateNodeTextColors();
 
     return { svg, nodes, links, simulation, node, link };
 }
 
-function updateNodeTextColors() {
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    d3.selectAll(".node text").style("fill", isDarkMode ? "#ecf0f1" : "#333");
+function resizeGraph() {
+    if (!graph.svg || !graph.simulation) return;
+
+    const container = document.getElementById('graph-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    graph.svg.attr('width', width).attr('height', height);
+
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    const researchAreaNodes = graph.nodes.filter(d => d.type === 'research_area');
+    const numResearchAreas = researchAreaNodes.length;
+    const radius = Math.min(width, height) / 3.5;
+    researchAreaNodes.forEach((node, i) => {
+        const angle = (i / numResearchAreas) * 2 * Math.PI - Math.PI / 2;
+        node.fx = centerX + radius * Math.cos(angle);
+        node.fy = centerY + radius * Math.sin(angle);
+    });
+
+    const institutionNodes = graph.nodes.filter(d => d.type === 'institution');
+    const numInstitutions = institutionNodes.length;
+    const institutionRadius = Math.min(width, height) / 2.2;
+    institutionNodes.forEach((node, i) => {
+        const angle = (i / numInstitutions) * 2 * Math.PI;
+        node.fx = centerX + institutionRadius * Math.cos(angle);
+        node.fy = centerY + institutionRadius * Math.sin(angle);
+    });
+    
+    graph.simulation.force('center', d3.forceCenter(width / 2, height / 2));
+    graph.simulation.alpha(0.3).restart();
 }
 
 function showStakeholderInfo(stakeholder, links) {

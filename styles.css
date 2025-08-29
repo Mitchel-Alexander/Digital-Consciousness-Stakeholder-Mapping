@@ -6,31 +6,15 @@
 }
 
 :root {
-    --bg-color: #f5f5f5;
+    --bg-color: #ece8ec;
     --text-color: #333;
-    --sidebar-bg: #fff;
+    --sidebar-bg: #ece8ec;
     --border-color: #e0e0e0;
     --header-color: #2c3e50;
     --subheader-color: #7f8c8d;
-    --graph-bg: #f9f9f9;
+    --graph-bg: #ece8ec;
     --button-bg: white;
     --button-hover-bg: #f0f0f0;
-}
-
-body.dark-mode {
-    --bg-color: #2c3e50;
-    --text-color: #ecf0f1;
-    --sidebar-bg: #34495e;
-    --border-color: #4a6278;
-    --header-color: #ecf0f1;
-    --subheader-color: #bdc3c7;
-    --graph-bg: #2c3e50;
-    --button-bg: #34495e;
-    --button-hover-bg: #4a6278;
-}
-
-body.dark-mode, .dark-mode .sidebar, .dark-mode .stakeholder-info p, .dark-mode .filter-options label, .dark-mode .publications li, .dark-mode .connections li {
-    color: var(--text-color);
 }
 
 body {
@@ -74,14 +58,14 @@ body {
 #toggle-sidebar {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 300px;
     width: 40px;
     height: 40px;
     background-color: var(--button-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
     transition: left 0.3s, background-color 0.3s, border-color 0.3s, color 0.3s;
     display: flex;
     align-items: center;
@@ -96,7 +80,7 @@ body {
     transform: translateY(-1px);
 }
 
-.sidebar.collapsed + .main-content #toggle-sidebar {
+.sidebar.collapsed ~ #toggle-sidebar {
     left: 20px;
 }
 
@@ -194,6 +178,7 @@ body {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
+    transition: width 0.3s;
 }
 
 #graph-container {
@@ -248,12 +233,8 @@ body {
 }
 
 .node circle {
-    stroke: #fff;
+    stroke: var(--graph-bg);
     stroke-width: 2px;
-}
-
-body.dark-mode .node circle {
-    stroke: #2c3e50;
 }
 
 .node text {
@@ -261,17 +242,9 @@ body.dark-mode .node circle {
     fill: #333;
 }
 
-body.dark-mode .node text {
-    fill: var(--text-color);
-}
-
 .link {
     stroke: #999;
     stroke-opacity: 0.6;
-}
-
-body.dark-mode .link {
-    stroke: #ecf0f1;
 }
 
 .tag-list {
@@ -363,10 +336,4 @@ body.dark-mode .link {
     z-index: 100;
     max-width: 200px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-body.dark-mode .tooltip {
-    background-color: rgba(44, 62, 80, 0.9);
-    border-color: #4a6278;
-    color: #ecf0f1;
 }
